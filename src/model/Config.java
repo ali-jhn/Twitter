@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * A singleton class
+ */
 
 public class Config {
     private static Config instance = null;
@@ -36,7 +39,7 @@ public class Config {
         }
     }
 
-    public static Config getInstance() {
+    public static Config getInstance() {  // get config only once --> singleton class
         if (instance == null)
             instance = new Config();
         return instance;
