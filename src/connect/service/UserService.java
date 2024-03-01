@@ -13,6 +13,8 @@ import model.user.User;
 import java.io.*;
 import java.util.ArrayList;
 
+// * different user requests are services from server in this class
+
 public class UserService {
 
     private final Config config;
@@ -28,7 +30,6 @@ public class UserService {
             while (fileInputStream.available() > 0){
                 User readUser = (User) in.readObject();
                 if (readUser.getId().equals(request.getSenderId())){
-                    flag = true;
                     return new GetUserProfileRes(request.getSenderId(), true , "profile sent" , readUser.getId() , readUser.getName(), readUser.getCountry() , readUser.getJoinDate(), readUser.getProfile(), readUser.getFollowers() , readUser.getFollowing() , readUser.getTweets(), readUser.getBlackList());
                 }
             }
