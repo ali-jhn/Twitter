@@ -1,4 +1,4 @@
-# AP_Project_Mid-Final
+# Twitter Project
 Twitter application like the real app with the same features.
 
 <ul>
